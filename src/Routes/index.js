@@ -10,8 +10,9 @@ export default () =>
     <BrowserRouter>
     <Switch>
      
-    <Route path="/" component={App} exact></Route>
- <Route path="/Chat" render={props => <Chat {...props}></Chat>}></Route>
+  <Route  path="/" component={App} exact ></Route>
+ <Route  path="/Chat" component={Chat} ></Route>
+ <Route  path="*" component={() => "not found"}></Route>
    
     </Switch>
 

@@ -9,13 +9,17 @@ class Chat extends Component{
     render(){
         return(
 
-            <Container>
+          <div>
                 <h2 className="ChatHeader">Chat </h2>
+
+            <Container>
                 <Row>
                 
                 <Col sm={8} className="MainChat">
-                <lable>Oddds</lable>
+                <h5>Messages</h5>
+                <div className="ChatMessages">
 
+                </div>
                 
                 <InputGroup className="mb-3">
     <FormControl
@@ -28,10 +32,12 @@ class Chat extends Component{
                 </Col>
 
                 <Col sm={4} className="OnlineUsers">
-                    <lable>Online Users</lable>
+                    <h5>Online Users</h5>
                 </Col>
                 </Row>
             </Container>
+
+          </div>
 
         )
     }

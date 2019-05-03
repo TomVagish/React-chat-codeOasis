@@ -1,20 +1,31 @@
 .ChatHeader{
-    color: aquamarine;
+    color: whitesmoke;
     background-color: #333333e1;
-    padding: 2%;
+    padding: 1%;
     text-align: center;
     font-size: 50px;
 }
 
 .MainChat{
+    border-radius: 3%;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgba(197, 197, 197, 0.39);
+}
+
+.ChatMessages{
+
+    height: 400px;
     
 }
 
 .OnlineUsers{
-    color: aquamarine;
+    color: navy;
     font-family: tahoma;
     font-weight: bold;
     font-size: 40px;
-    border-left: 5px solid black;
+
     
 }
