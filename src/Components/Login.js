@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import '../Css/Login.css'
 import { Form,Col,Row,Container, Button } from 'react-bootstrap';
-import { Link,Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios'
 
 class Login extends Component {
@@ -11,7 +11,7 @@ class Login extends Component {
     this.state = {
       username: '',
       token:'',
-      GotoChat:false
+      
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -19,8 +19,8 @@ class Login extends Component {
 
   handleClick () {
   
-    axios.post('http://localhost:8081/users',{username:this.state.username})
-      .then((response) => this.setState({token:response.data.Token,GotoChat:true},this.setDatainLocalStorage(response))
+    axios.post('http://localhost:8080/users',{username:this.state.username})
+      .then((response) => this.setState({token:response.data.Token,username:response.data.username},this.setDatainLocalStorage(response))
       
       ).catch(error => console.log(error));
     
@@ -69,7 +69,7 @@ class Login extends Component {
     </Col>
   </Form.Group>
   <Button onClick={this.handleClick}  variant="dark" >Login</Button>
-  {this.state.token ? <Redirect to='/Chat'  />  : null}
+  {this.state.token ? <Redirect to={{pathname:`/Chat`,state:{username:this.state.username}}}  />  : null}
 </Form>
         
        </Col>

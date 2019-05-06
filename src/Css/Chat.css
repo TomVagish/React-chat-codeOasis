@@ -18,14 +18,59 @@
 .ChatMessages{
 
     height: 400px;
+    overflow-y: scroll;
+    
+}
+
+.allMessages{
+    list-style-type: none;
+    text-align: left;
+    font-size: 15px;
+
+}
+.allConnectedUsers{
+    
+  
+  text-align: center;
+  border-radius: 5%;
+  color: rgb(0, 160, 85);
+    
     
 }
 
 .OnlineUsers{
-    color: navy;
+    color: rgb(96, 0, 151);
     font-family: tahoma;
+    text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 
-    
 }
+
+.wellcomeUserStyle{
+    color: rgb(96, 0, 151);
+    font-family: tahoma;
+}
+
+.EmptymessageStyle{
+    color: red;
+}
+
+.MeinChat{
+    text-align: center;
+    color: rgb(0, 109, 182);
+    width: 15%;
+    float: left;
+    margin-right: 2%;
+    border-radius: 20%;
+}
+
+.ChatWithStyle{
+    color: rgb(0, 165, 143);
+    font-size: 15px;
+    font-family: tahoma;
+   
+     
+}
+
+
